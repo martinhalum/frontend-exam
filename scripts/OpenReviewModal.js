@@ -4,7 +4,7 @@ const closeModalButton = document.getElementById("closeModalButton");
 const modal = document.getElementById("review-modal");
 
 // Function to open the modal
-function openModal() {
+function openReviewModal() {
   modal.style.display = "flex";
 }
 
@@ -14,5 +14,4 @@ function closeModal() {
 }
 
 // Event listeners
-openModalButton.addEventListener("click", openModal);
 closeModalButton.addEventListener("click", closeModal);
