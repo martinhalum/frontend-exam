@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Legal Match - Find the right lawyer now</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <!-- App Styling -->
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <!-- For Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div id="header">
+      <div id="logo-tagline">
+        <img id="logo" src="./images/logo.png" />
+        <span id="tagline">FIND THE RIGHT LAWYER NOW</span>
+      </div>
+      <div id="icon-span-group">
+        <div id="icon-span">
+          <i class="fas fa-check icon-success"></i>
+          <span id="feature-span">No fee to present your case</span>
+        </div>
+        <div id="icon-span">
+          <i class="fas fa-check icon-success"></i>
+          <span id="feature-span">Choose from lawyers in your area</span>
+        </div>
+        <div id="icon-span">
+          <i class="fas fa-check icon-success"></i>
+          <span id="feature-span">A 100% confidential service</span>
+        </div>
+      </div>
+    </div>
+    <div id="content">
+      <div id="heading">
+        <span id="content-header">Find a Lawyer for your Legal Issue</span>
+        <span id="content-subheader">Fast, Free and Confidential</span>
+      </div>
+      <div id="body">
+        <div id="input-group">
+          <div id="city-input">
+            <label id="city-label" class="input-label"
+              >Enter city Code or City:</label
+            >
+            <div id="numbered-input">
+              <div id="number-container">
+                <span id="number-span">1</span>
+              </div>
+              <input
+                type="text"
+                id="city-search"
+                class="search-input"
+                placeholder="Does not have to be where you live"
+              />
+            </div>
+            <ul id="city-suggestions" class="dropdown"></ul>
+          </div>
+          <div id="city-input">
+            <label id="category-label" class="input-label"
+              >Choose a Category:</label
+            >
+            <div id="numbered-input">
+              <div id="number-container">
+                <span id="number-span">2</span>
+              </div>
+              <div>
+                <button
+                  id="dropdownBtn"
+                  class="dropdown-button"
+                  onclick="populateDropdown()"
+                >
+                  <span id="dropdown-span"
+                    >Click to choose a legal category</span
+                  >
+                  <i class="fa fa-chevron-down" id="dropdown-icon"></i>
+                </button>
+                <ul id="dropdownOptions" class="dropdown"></ul>
+              </div>
+              <div id="others-group">
+                <span id="others-span"
+                  >Can't find your category?
+                  <a href="#" id="others-link">Click here.</a></span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="reviews-content">
+          <span id="reviews-header">Clients review LegalMatch lawyers</span>
+          <div id="review-group">
+            <div id="review-item" class="bordered">
+              <div id="lawyer-profile">
+                <img id="review-avatar" src="./images/mitchell.png" />
+                <span id="lawyer-name">Mitchell M</span>
+                <span id="lawyer-loc">Cherry Hill, NJ</span>
+              </div>
+              <div id="review-detail">
+                <div id="star-group">
+                  <span id="review-category">Family Law</span>
+                  <img src="./images/favorite_star.png" id="star-rating" />
+                </div>
+                <div id="body-group">
+                  <span id="review-body"
+                    >“Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et ...</span
+                  >
+                  <button id="read-link">
+                    <span id="read-more"
+                      >Read Review <i class="fa fa-book-open"></i
+                    ></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div id="review-item" class="bordered">
+              <div id="lawyer-profile">
+                <img id="review-avatar" src="./images/joel.png" />
+                <span id="lawyer-name">Joel C</span>
+                <span id="lawyer-loc">Little Rock, AK</span>
+              </div>
+              <div id="review-detail">
+                <div id="star-group">
+                  <span id="review-category">Job & Employment Law</span>
+                  <img src="./images/favorite_star.png" id="star-rating" />
+                </div>
+                <div id="body-group">
+                  <span id="review-body"
+                    >“Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et ...</span
+                  >
+                  <button id="read-link">
+                    <span id="read-more"
+                      >Read Review <i class="fa fa-book-open"></i
+                    ></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div id="review-item">
+              <div id="lawyer-profile">
+                <img id="review-avatar" src="./images/brigida.png" />
+                <span id="lawyer-name">Brigida R</span>
+                <span id="lawyer-loc">Dallas, TX</span>
+              </div>
+              <div id="review-detail">
+                <div id="star-group">
+                  <span id="review-category">Family Law</span>
+                  <img src="./images/favorite_star.png" id="star-rating" />
+                </div>
+                <div id="body-group">
+                  <span id="review-body"
+                    >“Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et ...</span
+                  >
+                  <button id="read-link">
+                    <span id="read-more"
+                      >Read Review <i class="fa fa-book-open"></i
+                    ></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <div id="logo-tagline-footer">
+        <img id="footer-logo" src="./images/footer-logo.png" />
+        <span id="tagline">FIND THE RIGHT LAWYER NOW</span>
+      </div>
+      <div id="policy-group">
+        <div id="policy-links">
+          <a id="user-agreement" class="policy-link">User Agreement</a>
+          <i class="fa-solid fa-circle custom-icon"></i>
+          <a id="privacy-policy" class="policy-link">Privacy Policy</a>
+          <i class="fa-solid fa-circle custom-icon"></i>
+          <a id="site-map" class="policy-link">Site Map</a>
+        </div>
+        <div id="copyright">
+          <span id="copyright-span">
+            Copyright 1999-2016 LegalMatch. All rights reserved. Legalmatch ®,
+            the LegalMatch logo, and the tradedress are trademarks of
+            LegalMatch. Patents Pending
+          </span>
+        </div>
+      </div>
+      <div id="accreditation-section">
+        <img id="truste-logo" src="./images/truste-logo.png" />
+        <img id="bbb-logo" src="./images/bbb-logo.png" />
+      </div>
+    </div>
+    <div id="review-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span id="modal-header-span">CLIENT REVIEWS</span>
+          <i class="fa fa-xmark" class="close" id="closeModalButton"></i>
+        </div>
+        <div class="modal-body">
+          <div id="profile-section">
+            <img src="./images/mitchell.png" class="modal-avatar" />
+            <div class="modal-profile">
+              <span class="modal-name">Mitchell C.</span>
+              <span class="modal-loc">Cherry Hill, NJ</span>
+              <span class="modal-cat">Family Law</span>
+            </div>
+          </div>
+          <div id="review-section">
+            <div id="review-section-header">
+              <span id="rating-header">Rating</span>
+              <span id="users-header">(29 users)</span>
+              <img id="star-header" src="./images/favorite_star.png" />
+            </div>
+            <div id="review-section-body">
+              <span id="section-header">Overall</span>
+              <div id="review-content">
+                <div id="category-score">
+                  <span id="category">Responded in a timely manner</span>
+                  <img src="./images/favorite_star.png" id="score" />
+                </div>
+                <div id="category-score">
+                  <span id="category">Answered questions clearly</span>
+                  <img src="./images/favorite_star.png" id="score" />
+                </div>
+                <div id="category-score">
+                  <span id="category">Understood needs</span>
+                  <img src="./images/favorite_star.png" id="score" />
+                </div>
+                <div id="category-score">
+                  <span id="category">Gave complete and clear information</span>
+                  <img src="./images/favorite_star.png" id="score" />
+                </div>
+                <div id="category-score">
+                  <span id="category">Knowledgeable in legal areav</span>
+                  <img src="./images/favorite_star.png" id="score" />
+                </div>
+                <div id="category-score">
+                  <span id="category">Good value for money</span>
+                  <img src="./images/favorite_star.png" id="score" />
+                </div>
+                <div id="category-score">
+                  <span id="category">Would hire again</span>
+                  <img src="./images/favorite_star.png" id="score" />
+                </div>
+                <div id="category-score">
+                  <span id="category">Would recommend to friend</span>
+                  <img src="./images/favorite_star.png" id="score" />
+                </div>
+              </div>
+            </div>
+            <div id="review-section-footer">
+              <div id="footer-review">
+                <div id="footer-review-header">
+                  <img src="./images/favorite_star.png" />
+                  <span id="footer-review-user"
+                    >by Dexter Marchal, 06/10/2016</span
+                  >
+                </div>
+                <div>
+                  <span id="footer-review-content"
+                    >Mitch did a great job. Got my bench warrant set aside ...
+                    was sure I was going to jail ... phew. Judge seemed to
+                    respect him and I got what I want</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="others-modal" class="modal">
+      <div class="modal-content">
+        <div class="others-header">
+          <div class="title-subtitle">
+            <span id="modal-header-span">Other Categories</span>
+            <span id="modal-subtitle-span"
+              >Choose the category that best fits your case</span
+            >
+          </div>
+          <i class="fa fa-xmark" class="close" id="close-others-button"></i>
+        </div>
+        <div>
+          <ul class="others-list two-column-list">
+            <li><a href="#">Abuse (Child, Domestic, Sexual)</a></li>
+            <li><a href="#">Agencies & Administration</a></li>
+            <li><a href="#">Automobile (DUI, Crimes, Speeding)</a></li>
+            <li><a href="#">Automobiles (Accidents, Insurance)</a></li>
+            <li><a href="#">Banking (Business, Consumer)</a></li>
+            <li><a href="#">Bars & Restaurants</a></li>
+            <li><a href="#">Business Formation & Dissolution</a></li>
+            <li><a href="#">Children (Adoption, Custody, Support)</a></li>
+            <li><a href="#">Class Actions (Bad Drugs, Products)</a></li>
+            <li><a href="#">Commercial Law and Contracts</a></li>
+            <li><a href="#">Commercial Real Estate</a></li>
+            <li><a href="#">Constitutional Law</a></li>
+            <li><a href="#">Construction (Disputes, Liens)</a></li>
+            <li><a href="#">Categories Item Here</a></li>
+            <li><a href="#">Loremipsum Dolorsitamet,</a></li>
+            <li><a href="#">Lonsectetur Scingelit (Baseererkj, Mereit)</a></li>
+            <li><a href="#">Miam Euvelit</a></li>
+            <li><a href="#">Mempor Auctor (Estiarma, Toeruslej)</a></li>
+            <li><a href="#">Nisultricies Dictumest.</a></li>
+            <li><a href="#">Ntfring Sodalelit (Aeeticl Restoustoust)</a></li>
+            <li><a href="#">Ntvarius Lectus & Congue</a></li>
+            <li><a href="#">Pellentesque</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="step-three-modal" class="modal">
+      <div id="category-content" class="modal-content">
+        <div class="modal-header borderless">
+          <div id="others-number-container">
+            <span id="number-span">3</span>
+          </div>
+          <span id="category-header"
+            >Which <b>Family law</b> issue(s) apply to your case?</span
+          >
+          <i class="fa fa-xmark" class="close" id="category-close"></i>
+        </div>
+        <div class="items">
+          <div class="column">
+            <label class="checkbox-label" for="adoption"
+              ><input type="checkbox" id="adoption" /> Adoptions</label
+            >
+            <label class="checkbox-label" for="child-support"
+              ><input type="checkbox" id="child-support" /> Child Support</label
+            >
+            <label class="checkbox-label" for="guardianship"
+              ><input type="checkbox" id="guardianship" /> Guardianship</label
+            >
+            <label class="checkbox-label" for="separations"
+              ><input type="checkbox" id="separations" /> Separations</label
+            >
+          </div>
+          <div class="column">
+            <label class="checkbox-label" for="child-custody"
+              ><input type="checkbox" id="child-custody" /> Child Custody and
+              Visitation</label
+            >
+            <label class="checkbox-label" for="divorce"
+              ><input type="checkbox" id="divorce" /> Divorce</label
+            >
+            <label class="checkbox-label" for="paternity"
+              ><input type="checkbox" id="paternity" /> Paternity</label
+            >
+            <label class="checkbox-label" for="spousal-support"
+              ><input type="checkbox" id="spousal-support" /> Spousal Support or
+              Alimony</label
+            >
+          </div>
+        </div>
+        <button id="find-lawyer" id="category-close">Find a lawyer now</button>
+        <div style="clear: both"></div>
+      </div>
+    </div>
+    <script src="./scripts/OpenOthersModal.js"></script>
+    <script src="./scripts/OpenReviewModal.js"></script>
+    <script src="./scripts/PopulateDropdown.js"></script>
+    <script src="./scripts/CitySearch.js"></script>
+  </body>
+</html>
